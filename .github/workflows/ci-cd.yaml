@@ -33,7 +33,7 @@ jobs:
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v1
         with:
-          project_id: 'sos2324-jul-asb'
+          project_id: 'sos2324-dic-asb'
 
       - name: Use gcloud CLI
         run: gcloud info

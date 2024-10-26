@@ -12,9 +12,9 @@ afterAll(async () => {
 
 
 test('Carga página principal', async () => {
-    await page.goto('https://sos2324-jul-asb.ew.r.appspot.com//cars-by-motor');
+    await page.goto('https://sos2324-jul-asb.ew.r.appspot.com/cars-by-motor');
     await expect(page).toHaveTitle('cars-by-motor');
-    await expect(page).toHaveURL('https://sos2324-jul-asb.ew.r.appspot.com//cars-by-motor');
+    await expect(page).toHaveURL('https://sos2324-jul-asb.ew.r.appspot.com/cars-by-motor');
 });
 
 /*
