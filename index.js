@@ -14,7 +14,7 @@ import cors from "cors";
 import request from "request";
 
 
-console.log("BB");
+console.log("B");
 let app = express();
 const PORT = process.env.PORT || 8081;
 
