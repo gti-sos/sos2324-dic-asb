@@ -53,20 +53,25 @@
             <li>Antonio Suero Baeza</li>
         </ul>
         <p>Descripción del proyecto: Mi proyecto se basa en analizar las distintas motorizaciones en Europa.</p>
-        <p>Repositorio: <a href="https://github.com/gti-sos/sos2324-dic-sss.git">gti-sos/SOS2324-DIC-ASB</a></p>
-        <p>URL: <a href="https://sos2324-jul-asb.ew.r.appspot.com/"></a></p>
+        <p>Repositorio: <a href="https://github.com/gti-sos/sos2324-dic-asb.git">gti-sos/SOS2324-DIC-ASB</a></p>
+        <p>URL: <a href="https://sos2324-dic-asb.ew.r.appspot.com/"></a></p>
         <h2>API:</h2>
         <ul>
-            <li>API Antonio: <a href="https://sos2324-jul-asb.ew.r.appspot.com/api/v1/cars-by-motor"> cars-by-motor-v1</a>, <a href="https://sos2324-jul-asb.ew.r.appspot.com/api/v2/cars-by-motor"> cars-by-motor-v2</a> (developed by Antonio Suero Baeza)</li>
+            <li>API Antonio: <a href="https://sos2324-dic-asb.ew.r.appspot.com/api/v1/cars-by-motor"> cars-by-motor-v1</a>, <a href="https://sos2324-dic-asb.ew.r.appspot.com/api/v2/cars-by-motor"> cars-by-motor-v2</a> (developed by Antonio Suero Baeza)</li>
         </ul>
         <h3>DOCS API:</h3>
         <ul>
-            <li>ANTONIO: <a href="https://sos2324-jul-asb.ew.r.appspot.com/api/v1/cars-by-motor/docs"> cars-by-motor-V1 </a>, <a href="https://sos2324-jul-asb.ew.r.appspot.com/api/v2/cars-by-motor/docs"> cars-by-motor-V2 </a> (developed by Antonio Suero Baeza)</li>
+            <li>ANTONIO: <a href="https://sos2324-dic-asb.ew.r.appspot.com/api/v1/cars-by-motor/docs"> cars-by-motor-V1 </a>, <a href="https://sos2324-dic-asb.ew.r.appspot.com/api/v2/cars-by-motor/docs"> cars-by-motor-V2 </a> (developed by Antonio Suero Baeza)</li>
         </ul>
         <h3>FRONT-END:</h3>
         <ul>
-            <li>ANTONIO:  <a href="https://sos2324-jul-asb.ew.r.appspot.com/cars-by-motor"> cars-by-motor </a> (developed by Antonio Suero Baeza)</li>
+            <li>ANTONIO:  <a href="https://sos2324-dic-asb.ew.r.appspot.com/cars-by-motor"> cars-by-motor </a> (developed by Antonio Suero Baeza)</li>
         </ul>
+        <h3>DOCKER:</h3>
+        <ul>
+            <li>docker run -p 12000:8080 -d "antsuebae03/sos2324-dic-asb:0.0.0"</li>
+        </ul>
+       
     </div>
 </body>
 </html>
