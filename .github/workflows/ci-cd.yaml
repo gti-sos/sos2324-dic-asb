@@ -1,0 +1,59 @@
+name: CI / CD
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: npm install echarts
+      - run: cd front; npm install; cd ..
+      - run: cd front; npm run build; cd ..
+      - run: npm install
+      - run: npx playwright install --with-deps
+      - run: npm run test-ASB
+      - run: npx playwright test
+
+
+  deploy:
+    needs: [test]
+    runs-on: ubuntu-latest
+    environment: production
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Authenticate to Google Cloud
+        env:
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}
+        run: |
+          echo '${{ secrets.GOOGLE_APPLICATION_CREDENTIALS }}' > /tmp/credentials.json
+          gcloud auth activate-service-account --key-file=/tmp/credentials.json
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v1
+        with:
+          project_id: 'sos2324-jul-asb'
+
+      - name: Use gcloud CLI
+        run: gcloud info
+
+      - name: Install npm dependencies
+        run: npm install echarts
+
+      - name: Install frontend dependencies
+        run: |
+          cd front
+          npm install
+          cd ..
+
+      - name: Build frontend
+        run: |
+          cd front
+          npm run build
+          cd ..
+
+      - name: Deploy to App Engine
+        run: gcloud app deploy --quiet
+
+
